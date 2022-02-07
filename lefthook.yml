@@ -1,6 +1,10 @@
 pre-commit:
   parallel: true
   commands:
+    backend-cargo-check:
+      tags: Backend cargo check
+      glob: "backend/*.{rs}"
+      run: cd backend && cargo check
     rust-lint:
       tags: Rust auto-formatter
       glob: "backend/*.{rs}"
