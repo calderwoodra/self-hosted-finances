@@ -6,4 +6,4 @@
 4. `cp .env.sample .env` and follow the instructions there 
 
 ### Running the web server
-`cargo-watch -x run`
+`make server`
