@@ -1,23 +1,20 @@
 #[macro_use]
 extern crate rocket;
+#[macro_use]
+extern crate diesel;
+extern crate dotenv;
 
+mod db;
 mod responders;
-use responders::ok_responders::{OkJson, OkJsonResponse};
-use rocket::serde::json::json;
-
-#[get("/")]
-fn index() -> OkJsonResponse {
-    return Result::Ok(OkJson(json!({
-        "data": "Hello, World!",
-    })));
-}
-
-#[get("/error")]
-fn error() -> OkJsonResponse {
-    return Result::Err("This request always fails!");
-}
+mod sample;
+mod users;
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index, error])
+    rocket::build()
+        .mount(
+            "/sample",
+            routes![sample::controller::index, sample::controller::error],
+        )
+        .mount("/users", routes![users::controller::get_user])
 }
