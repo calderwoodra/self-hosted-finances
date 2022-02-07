@@ -1,10 +1,10 @@
 ### v0.1 - Env
 - [x] Setup Rust web-server 
-- [ ] Add PostgreSQL DB
+- [x] Add PostgreSQL DB
 
 ### v0.2 - CLI interface & Auth
 - [ ] Pick a CLI frameworks
-- [ ] Add users and login backend APIs
+- [x] Add users and login backend APIs
 - [ ] Add signup and login CLI commands
 
 ### v0.3 - Data models
