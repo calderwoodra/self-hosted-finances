@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    stylelint:
+      tags: Rust auot-formatter
+      glob: "*.{rs}"
+      run: cargo fmt --check || (cargo fmt && git add --all)
