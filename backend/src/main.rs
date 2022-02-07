@@ -16,5 +16,12 @@ fn rocket() -> _ {
             "/sample",
             routes![sample::controller::index, sample::controller::error],
         )
-        .mount("/users", routes![users::controller::get_user])
+        .mount(
+            "/users",
+            routes![
+                users::controller::get,
+                users::controller::get_all,
+                users::controller::create
+            ],
+        )
 }
