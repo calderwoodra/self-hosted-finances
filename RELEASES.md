@@ -3,7 +3,7 @@
 - [x] Add PostgreSQL DB
 
 ### v0.2 - CLI interface & Auth
-- [ ] Pick a CLI frameworks
+- [x] Pick a CLI frameworks
 - [x] Add users and login backend APIs
 - [ ] Add signup and login CLI commands
 

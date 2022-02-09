@@ -6,3 +6,6 @@ server:
 
 psql:
 	psql -U db-finance-user -d self-hosted-finances
+
+cmd:
+	cd cli/ && cargo-watch -x build

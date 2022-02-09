@@ -2,6 +2,8 @@
 #### Installs
 1. [Install Rust](https://doc.rust-lang.org/book/ch01-01-installation.html)
 2. [Install cargo-watch](https://crates.io/crates/cargo-watch)
+   1. `cd backend/ && cargo install watch && cd ..`
+   2. `cd cli/ && cargo install watch && cd ..`
 3. `brew install lefthook && lefthook install`
 4. Setup PostgreSQL
    1. `brew install postgresql@13` 

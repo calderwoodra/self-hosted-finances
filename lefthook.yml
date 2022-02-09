@@ -5,9 +5,19 @@ pre-commit:
       tags: Backend cargo check
       glob: "backend/*.{rs}"
       run: cd backend && cargo check
-    rust-lint:
-      tags: Rust auto-formatter
+    backend-rust-lint:
+      tags: Backend Rust auto-formatter
       glob: "backend/*.{rs}"
       run: |
         cd backend
+        cargo fmt --check || (cargo fmt && git add --all)
+    cli-cargo-check:
+      tags: CLI cargo check
+      glob: "cli/*.{rs}"
+      run: cd cli && cargo check
+    cli-rust-lint:
+      tags: CLI Rust auto-formatter
+      glob: "cli/*.{rs}"
+      run: |
+        cd cli
         cargo fmt --check || (cargo fmt && git add --all)
